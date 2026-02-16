@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Editor</title>
+    <link rel="stylesheet" type="text/css" href="code-style.css">
+</head>
+<body class="dark-mode">
+    <div id="controls">
+        <div id="tabs"></div>
+        <div id="actions">
+            <button id="add-tab" title="Add new tab">+</button>
+            <button id="clear-all" title="Clear all tabs">🗑</button>
+            <button id="theme-toggle" title="Toggle theme">☀</button>
+        </div>
+    </div>
+    <div id="editor-container">
+        <pre id="line-numbers"></pre>
+        <textarea id="codeEditor" spellcheck="false" autofocus></textarea>
+        <pre id="highlighted-code"><code class="hljs"></code></pre>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        // Verify highlight.js loaded
+        console.log('highlight.js loaded:', typeof hljs !== 'undefined');
+        if (typeof hljs !== 'undefined') {
+            console.log('Available languages:', hljs.listLanguages().slice(0, 10));
+        }
+    </script>
+    <script src="code-script.js"></script>
+</body>
+</html>

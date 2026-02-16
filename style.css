@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Slightly off-white background for better visibility */
+}
+
+#tabs {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    background-color: #e0e0e0;
+}
+
+.tab {
+    padding: 8px 16px;
+    border: none;
+    background-color: #d0d0d0;
+    color: #666;
+    cursor: pointer;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 14px;
+    border-radius: 4px 4px 0 0;
+    transition: background-color 0.2s;
+}
+
+.tab:hover {
+    background-color: #c0c0c0;
+}
+
+.tab.active {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#typingCanvas {
+    --padding: 20px;
+
+    width: calc(100% - 2 * var(--padding));
+    height: calc(100% - 2 * var(--padding) - 50px);
+
+    border: none;
+    outline: none; /* Removes the default focus outline */
+    background: transparent; /* Makes the textarea background transparent */
+    margin: 0;
+    padding: var(--padding); /* Adds some padding for better text positioning */
+    resize: none;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20px;
+    color: #333; /* Darker text color for better contrast */
+}
+
+/* Ensuring the cursor is always visible */
+#typingCanvas:focus {
+    outline: none; /* Removes the outline to keep the interface clean */
+}
+
