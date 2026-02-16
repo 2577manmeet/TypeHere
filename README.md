@@ -1,33 +1,32 @@
-# TypeHere - Multi-Canvas Text Editor
+# Code Editor - Multi-Tab Syntax Highlighting
 
-Clone of [typehere.co](http://typehere.co/) - a minimalist browser-based notepad with multiple canvas support.
+A minimalist browser-based code editor with syntax highlighting and multiple tabs.
 
 ## Features
 
-- Multiple text canvases with tab switching
-- Auto-saves to browser local storage
-- Clean, distraction-free interface
+- Syntax highlighting for multiple languages (auto-detected by highlight.js)
+- Dark/light mode toggle
+- Line numbers that sync with scrolling
+- Multiple tabs with custom names
+- Tab key support (inserts 4 spaces)
+- Add/close/rename tabs
+- Clear all content option
+- Auto-save to browser local storage
 - No sign-up or server required
 
 ## Live Demo
 
-- [Text Editor](index.html) - Simple multi-canvas notepad
-- [Code Editor](code.html) - Code editor with syntax highlighting
-
-## Code Editor Features
-
-- Syntax highlighting for multiple languages (auto-detected)
-- Dark/light mode toggle
-- Line numbers
-- Multiple tabs with custom names
-- Tab key support (4 spaces)
-- Add/close/rename tabs
-- Clear all content option
-- Auto-save to local storage
+Open `index.html` in your browser to start coding.
 
 ## Usage
 
-Simply open `index.html` or `code.html` in your browser. Everything is stored locally in your browser's localStorage.
+Everything is stored locally in your browser's localStorage. Your code persists between sessions.
+
+- Click the pencil icon (✎) on any tab to rename it
+- Click the × to close a tab (can't close the last one)
+- Use the + button to add new tabs
+- Toggle theme with the ☀/🌙 button
+- Clear all tabs and content with the 🗑 button
 
 ## Deployment
 
@@ -40,10 +39,10 @@ This is a static site - just serve the HTML files. Works with:
 
 ## Local Development
 
-No build process needed. Just open the HTML files in a browser.
+No build process needed. Just open `index.html` in a browser.
 
-## Credits
+## Technologies
 
-Original concept: [typehere.co](http://typehere.co/)
-
-Read more: [https://squadrick.dev/journal/typehere.html](https://squadrick.dev/journal/typehere.html)
+- Pure JavaScript (no frameworks)
+- [highlight.js](https://highlightjs.org/) for syntax highlighting
+- localStorage for persistence
