@@ -265,3 +265,174 @@ body.light-mode .hljs-title { color: #795e26; }
 body.light-mode .hljs-params { color: #001080; }
 body.light-mode .hljs-variable { color: #001080; }
 body.light-mode .hljs-operator { color: #000000; }
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .modal-content {
+    background-color: #2d2d30;
+    color: #d4d4d4;
+}
+
+body.light-mode .modal-content {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: "Consolas", "Monaco", "Courier New", monospace;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-family: "Consolas", "Monaco", "Courier New", monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+body.dark-mode #login-form input {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    border-color: #3e3e42;
+}
+
+body.light-mode #login-form input {
+    background-color: #f8f8f8;
+    color: #333333;
+    border-color: #cccccc;
+}
+
+#login-form input:focus {
+    outline: none;
+    border-color: #569cd6;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    font-family: "Consolas", "Monaco", "Courier New", monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+body.dark-mode .modal-content button {
+    background-color: #569cd6;
+    color: #ffffff;
+}
+
+body.light-mode .modal-content button {
+    background-color: #0078d4;
+    color: #ffffff;
+}
+
+.modal-content button:hover {
+    opacity: 0.9;
+}
+
+#register-btn {
+    background-color: #4ec9b0 !important;
+}
+
+#logout-btn {
+    background-color: #d16969 !important;
+}
+
+.hint {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.sync-status {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: center;
+    display: none;
+}
+
+.sync-status.success {
+    display: block;
+    background-color: rgba(78, 201, 176, 0.2);
+    color: #4ec9b0;
+}
+
+.sync-status.error {
+    display: block;
+    background-color: rgba(209, 105, 105, 0.2);
+    color: #d16969;
+}
+
+.sync-info {
+    font-size: 13px;
+    opacity: 0.8;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#logged-in {
+    text-align: center;
+}
+
+#logged-in p {
+    margin: 15px 0;
+}
+
+#sync-btn {
+    position: relative;
+}
+
+#sync-btn.synced::after {
+    content: '✓';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    font-size: 10px;
+    color: #4ec9b0;
+}

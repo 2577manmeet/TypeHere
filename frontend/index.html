@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Editor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="dark-mode">
+    <div id="controls">
+        <div id="tabs"></div>
+        <div id="actions">
+            <button id="sync-btn" title="Sync across devices">☁</button>
+            <button id="add-tab" title="Add new tab">+</button>
+            <button id="clear-all" title="Clear all tabs">🗑</button>
+            <button id="theme-toggle" title="Toggle theme">☀</button>
+        </div>
+    </div>
+    
+    <!-- Sync Modal -->
+    <div id="sync-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Sync Your Code</h2>
+            <div id="sync-status" class="sync-status"></div>
+            
+            <div id="login-form">
+                <input type="text" id="username" placeholder="Username (4-16 chars, letters/numbers)" maxlength="16" />
+                <input type="password" id="pin" placeholder="PIN (4-16 chars)" maxlength="16" />
+                <button id="login-btn">Login</button>
+                <button id="register-btn">Register</button>
+                <p class="hint">Create an account to sync your code across devices</p>
+            </div>
+            
+            <div id="logged-in" style="display: none;">
+                <p>Logged in as: <strong id="current-user"></strong></p>
+                <button id="sync-now-btn">Sync Now</button>
+                <button id="logout-btn">Logout</button>
+                <p class="sync-info">Auto-sync: <span id="auto-sync-status">Enabled</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="editor-container">
+        <pre id="line-numbers"></pre>
+        <textarea id="codeEditor" spellcheck="false" autofocus></textarea>
+        <pre id="highlighted-code"><code class="hljs"></code></pre>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        // Verify highlight.js loaded
+        console.log('highlight.js loaded:', typeof hljs !== 'undefined');
+        if (typeof hljs !== 'undefined') {
+            console.log('Available languages:', hljs.listLanguages().slice(0, 10));
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
